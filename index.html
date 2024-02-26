@@ -1,178 +1,104 @@
-	<head>
-	<script src="js/animatedtitle.js"></script>
-	<script src="js/jparticles.js"></script>
-    <script src="js/particle.js"></script>
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Shadow" />
-	<meta property="og:image" content="assets/avatar.png" />
-	<meta name="twitter:description" content="ShadowOcto's Github" />
-	
-	<link rel="shortcut icon" type="image/x-icon" href="assets/favi.ico">
-	<style>
-		@font-face {
-			font-family: "Roboto";
-			font-style: normal;
-			font-weight: 400;
-			src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
-			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-		}
-		html {
-			color: #ffffff;
-			height: 100%;
-			background-image: url("assets/background.png");
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			animation-name: fadein;
-			animation-duration: 1s;
-			font-family: roboto;
-		}
-		.center {
-			border-radius: 2%;
-			background-color: #0f0f0f9a;
-			padding: 35px;
-			position: absolute;
-			margin: auto;
-			width: 210;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			text-align: center;
-			animation-name: fadein;
-			animation-duration: 1s;
-		}
-		.right {
-			float: right;
-			text-align: right;
-		}
-		.img {
-			border-radius: 60%;
-			width: 150px;
-			height: 150px;
-			animation-name: imgpopout;
-			animation-duration: 1s;
-		}
-		p {
-			margin: 0px;
-			padding: 0px;
-		}
-		div { cursor: default; }
-		a { color: #3d5aff; }
-		.center hr {
-			width: 100%;
-			animation-name: flowout;
-			animation-duration: 2s;
-		}
-		.button {
-			display: inline-flex;
-			padding: 0;
-			margin-top: 10px;
-			height: 50px;
-			background: #3d5aff;
-			border: none;
-			outline: none;
-			border-radius: 5px;
-			overflow: hidden;
-			font-size: 16px;
-			font-weight: 500;
-			cursor: pointer;
-
-		}
-		.button:hover {
-			background: #3047ca;
-		}
-
-		.button:active {
-			background: #273aa5;
-		}
-
-		.button__text,
-		.button__icon {
-			display: inline-flex;
-			align-items: center;
-			padding: 0 24px;
-			color: #FFF;
-			height: 100%;
-		}
-
-		.button__icon {
-			font-size: 1.5em;
-			background: rgba(0, 0, 0, 0.08);
-		}
-
-		.gap {
-			padding: 10 0px;
-			height: 50px;
-		}
-		
-		hr { color: #FFFFFF; }
-		div:hover, a:hover { text-shadow: 0px 0px 8px; }
-		@keyframes fadein {
-			0% { opacity: 0%; }
-			100% { opacity: 100%; }
-		}
-		@keyframes flowout {
-			0% { width: 0%; }
-			100% { width: 100%; }
-		}
-		@keyframes imgpopout {
-			0% {
-				width: 0px;
-				height: 0px;
-			}
-			100% {
-				width: 150px;
-				height: 150px;
-			}
-		}
-	
-	</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?v=timestamp">
+    <title>ShadowOcto</title>
 </head>
-
 <body>
-	<div id="particles" style="position: fixed; width: 100%; height: 100%;"></div>
-	<span class="center">
-		<img class="img" src="assets/avatar.png">
-		<div style="font-size: 180%;">ShadowOcto</div>
-		<div style="color: #c2c2c2;">shadowocto (discord)</div>
-		<hr>
-	</button>
-	<button type="button" class="button" onClick="window.location.href = 'https://ShadowOcto.github.io/projects.html';">
-		<span class="button__text">Projects</span>
-		<span class="button__icon">
-			<ion-icon name="folder-open"></ion-icon>
-		</span>
-	</button>
-	<button type="button" class="button" onClick="window.location.href = 'https://www.youtube.com/channel/UCivbpzaX3hy8nGScqS8sXiQ';">
-		<span class="button__text">YouTube</span>
-		<span class="button__icon">
-			<ion-icon name="logo-youtube"></ion-icon>
-		</span>
-	</button>
-		<button type="button" class="button" onClick="window.location.href = 'https://github.com/ShadowOcto';">
-			<span class="button__text">Github</span>
-			<span class="button__icon">
-				<ion-icon name="logo-github"></ion-icon>
-			</span>
-		</button>
-		<button type="button" class="button" onClick="window.location.href = 'https://steamcommunity.com/id/Shadow0cto';">
-		
-			<span class="button__text">Steam</span>
-			<span class="button__icon">
-				<ion-icon name="logo-steam"></ion-icon>
-			</span>
-		</button>
-		</hr>
-	</span>
-	<script>
-		new JParticles.particle('#particles', {
-			color: ['white', '#3d5aff'],
-			proximity: 120,
-			range: 2000,
-			parallax: true,
-			maxSpeed: 1,
-     		minSpeed: 1
-		});
-	</script>
-	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <canvas id="background"></canvas>
+    <nav class="navbar">
+        <div class="container">
+            <h3>✦ ShadowOcto</h3>
+        </div>
+    </nav>
+
+    <div class="info-box" id="infoBox">
+        <div class="handle" id="handle">
+            <div class="handle-title">Welcome</div>
+        </div>
+        <div class="container">
+            <pre>
+Welcome to the website,
+
+you'll find links to all my current and
+previous projects. Basically you'll be
+able to see everything I consider worth
+being proud of.
+
+- ShadowOcto
+
+</pre>
+        </div>
+    </div>
+
+    <div class="info-box" id="socialsBox">
+        <div class="handle" id="socialsHandle">
+            <div class="handle-title">Links</div>
+        </div>
+        <div class="container">
+            <a href="https://github.com/ShadowOcto" target="_blank">GitHub (ShadowOcto)</br></a>
+            <a href="https://steamcommunity.com/id/Shadow0cto" target="_blank">Steam (Shadow0cto)</br></a>
+            <a href="https://namemc.com/profile/ShadowOcto.1" target="_blank">Minecraft (ShadowOcto)</br></a>
+            <a href="https://discord.com/users/874362448944181278" target="_blank">Discord (shadowocto)</a>
+        </div>
+    </div>
+
+    <div class="info-box" id="youtubeBox">
+        <div class="handle" id="youtubeHandle">
+            <div class="handle-title">YouTube</div>
+        </div>
+        <div class="container">
+            <a href="https://www.youtube.com/@ShadowOcto" target="_blank">ShadowOcto (2018)</a>
+            <p class="description">Intro/Graphics Channel.</p>
+
+            <a href="https://www.youtube.com/@Shadow0cto" target="_blank">ShadowOcto (2023)</a>
+            <p class="description">Geometry Dash Channel.</p>
+
+            <a href="https://www.youtube.com/@TheAnticheatChannel" target="_blank">The Anticheat Channel (2021)</a>
+            <p class="description">Minecraft Cheating Channel.</p>
+
+            <a href="https://www.youtube.com/@ShadowOctoRBX" target="_blank">ShadowOctoRBX (2022)</a>
+            <p class="description">Criminality/Roblox Channel.</p>
+
+            <a href="https://www.youtube.com/@OctoShadow" target="_blank">OctoShadow (2021)</a>
+            <p class="description">Joke/Random Uploads Channel.</p>
+        </div>
+    </div>
+
+    <div class="info-box" id="cdBox">
+        <div class="handle" id="cdHandle">
+            <div class="handle-title">ClassiDash</div>
+        </div>
+        <div class="container">
+            <a href="https://classidash.fun/" target="_blank">ClassiDash Website (Template)</a>
+            <p class="description">Main page for ClassiDash GDPS.</p>
+
+            <a href="https://classidash.fun/demonlist" target="_blank">ClassiDash Demonlist (Custom)</a>
+            <p class="description">ClassiDash demonlist, leaderboard etc.</p>
+
+            <a href="https://youtube.com/@ClassiDash" target="_blank">ClassiDash YouTube Channel</a>
+            <p class="description">ClassiDash showcase channel.</p>
+
+            <a href="https://classidash.fun/discord" target="_blank">ClassiDash Discord</a>
+            <p class="description">ClassiDash discord server.</p>
+        </div>
+    </div>
+    
+    <div class="info-box" id="terminalBox">
+        <div class="handle" id="terminalHandle">
+            <div class="handle-title">Terminal</div>
+        </div>
+        <div class="container">
+            <div id="terminalOutput"></div>
+            <input type="text" id="terminalInput" placeholder="Type your command...">
+        </div>
+    </div>
+    
+
+    <h1 class="icon">✦</h1>
+
+    <script src="script.js?v=timestamp"></script>
 </body>
+</html>
