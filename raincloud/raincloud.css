@@ -12,6 +12,8 @@
     padding: 10px;
     border-radius: 8px;
     opacity: 0%;
+    user-select: none;
+    pointer-events: none;
     display: flex;
     transition: opacity 0.5s;
     z-index: 9999;
