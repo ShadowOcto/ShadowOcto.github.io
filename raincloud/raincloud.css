@@ -1,6 +1,6 @@
 .notification {
     font-family: 'Arial', sans-serif;
-    position: absolute;
+    position: sticky;
     left: 100%;
     top: 100%;
     transform: translate(calc(-100% - 10px), calc(-100% - 10px));
